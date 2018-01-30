@@ -1,19 +1,9 @@
-//function clearCookies($http_shipt_com_s_dyn_CookiesshowAll){
-//_navigateTo($http_shipt_com_s_dyn_CookiesshowAll); // Shows all cookies for www.yahoo.com domain.
-//_check(_checkbox("_sahi_chooseAll")); // Click the checkbox to choose all cookies.
-//_click(_button("Delete")); // Delete the cookies. 
-//}
 _navigateTo("https://shipt.com");
-
 _assertEqual("Your groceries, delivered.", _getText(_heading1("Your groceries, delivered.")));
 _click(_link("Log In"));
 _setValue(_emailbox("Email"), "qatest@shipt.com");
 _setValue(_password("Email"), "Sh1pt123!");
 _click(_submit("Log in"));
-//_assertExists(_submit("123 Demo Street"));
-//_click(_submit("123 Demo Street"));
-//_click(_paragraph("17 20th St N"));
-//_click(_div("item item-image[4]"));
 _setValue(_searchbox("search"), "Chicken");
 _click(_submit("button button-positive button-icon icon ion-ios-search SearchForm-submit"));
 _assertExists(_paragraph("Publix Deli Rotisserie Original Chicken"));
